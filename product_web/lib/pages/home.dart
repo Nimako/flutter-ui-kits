@@ -4,6 +4,7 @@ import 'package:product_web/widgets/beats_ads.dart';
 import 'package:product_web/widgets/contact_us.dart';
 import 'package:product_web/widgets/features.dart';
 import 'package:product_web/widgets/footer.dart';
+import 'package:product_web/widgets/grey_ads.dart';
 import 'package:product_web/widgets/header.dart';
 import 'package:product_web/widgets/hero_section.dart';
 import 'package:product_web/widgets/more_products.dart';
@@ -14,7 +15,7 @@ import 'package:responsive_framework/responsive_wrapper.dart';
 import '../widgets/beats_ads.dart';
 
 class Home extends StatelessWidget {
-  ScrollController controller = ScrollController();
+  final ScrollController controller = ScrollController();
   final List<Color> colors = [
     Colors.red,
     Colors.blue,
@@ -45,6 +46,12 @@ class Home extends StatelessWidget {
                       ProductSlider(),
                     ],
                   ),
+                ),
+                Container(
+                  child: GreyAds(),
+                ),
+                Container(
+                  child: Features(),
                 ),
                 Container(
                   child: MoreProducts(),
